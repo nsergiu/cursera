@@ -59,18 +59,25 @@ header nav ul li a {
 }
 
 #projects article {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 2rem;
     max-width: 400px;
 }
 
 #projects article:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+#projects article img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 #projects .project-content {
@@ -98,17 +105,16 @@ header nav ul li a {
 
 #projects .project-tech {
     display: flex;
-    gap: 0.5rem;
     flex-wrap: wrap;
+    gap: 0.5rem;
     margin-top: 1rem;
 }
 
 #projects .tech-tag {
-    background: #f0f2f5;
-    color: #2c3e50;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
+    background: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
 }
 
 /* Skills section */
@@ -298,4 +304,23 @@ button:active,
 #lightbox img {
     max-width: 90%;
     max-height: 90%;
+}
+
+/* Responsive grid layout */
+@media (min-width: 768px) {
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    #filter-buttons {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1024px) {
+    #projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
