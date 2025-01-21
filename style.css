@@ -1,0 +1,210 @@
+/* Basic styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header and navigation bar */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* About Me section */
+#about-me {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+}
+
+#about-me h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Projects section */
+#projects {
+    padding: 2rem;
+    background-color: #e8eff5;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#projects article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#projects img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+#projects figcaption {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Skills section */
+#skills {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#skills ul li {
+    background-color: #f4f4f9;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#skills ul li::before {
+    content: "✔️";
+    margin-right: 0.5rem;
+    color: green;
+}
+
+/* Contact form section */
+#contact {
+    padding: 2rem;
+    background-color: #e8eff5;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #555;
+}
+
+/* Media query for screens 768px or smaller */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #projects article {
+        flex-direction: column;
+    }
+
+    #skills ul {
+        flex-direction: column;
+    }
+}
+
+/* Vendor prefixes for cross-browser compatibility */
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#lightbox button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
