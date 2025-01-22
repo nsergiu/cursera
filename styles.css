@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    overflow-x: hidden;
 }
 
 /* Header and navigation bar */
@@ -12,6 +13,12 @@ header {
     background-color: #333;
     color: white;
     padding: 1rem 0;
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 header nav ul {
